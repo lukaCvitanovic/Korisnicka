@@ -1,0 +1,6 @@
+{
+    "name":"db",
+	"data":[
+        {"username": "admin", "pass": "admin"}
+    ]
+}

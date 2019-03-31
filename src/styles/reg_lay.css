@@ -1,0 +1,161 @@
+.obavezno,
+.dodatno {
+    text-align: left;
+}
+.obavezno {
+    margin-top: 20px;
+}
+.dodatno {
+    margin-top: 40px;
+}
+h2 {
+    font-weight: normal;
+    color: green;
+}
+.site_reg {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../resorces/backgr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+}
+.reg_form {
+    background-color: white;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: auto;
+    background-repeat: round;
+    border: 2px solid #00a300;
+}
+.reg_btn {
+    max-width: 319px;
+    min-width: 275px;
+    height: 50px;
+    background-color: #16ae01;
+    border: 2px solid #16ae01;
+    border-radius: 7px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    margin: 15px auto;
+}
+.reg_btn:hover {
+    background-color: white;
+    color: #16ae01;
+}
+#btn2 {
+    display: none;
+}
+.reg_form > input {
+    margin: auto;
+}
+.reg_form > div {
+    text-align: left;
+    margin-right: 0px;
+}
+.reg_input {
+    min-width: 275px;
+    max-width: 319px;
+    height: 2em;
+    font-size: 18px;
+    border: 1px solid black;
+    margin-bottom: 0px;
+}
+.reg_label {
+    margin-top: 5px;
+}
+.reg_wrong {
+    display: none;
+    background-color: #ff3f3f;
+    border: 2px solid red;
+    width: auto;
+    text-align: left;
+    margin-top: 5px;
+}
+.reg_wrong > p {
+    color: white;
+}
+#show_reg {
+    display: inherit;
+}
+#show_over {
+    overflow-y: scroll;
+}
+.error {
+    background-color: rgba(0, 0, 0, 0);
+    height: 40px;
+    width: auto;
+    position: relative;
+    bottom: 10px;
+    text-align: left;
+    display: flex;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+.ertxt {
+    margin: auto;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+@supports (display: grid) {
+    @media screen and (min-width: 400px) {
+        body {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        .site_reg {
+            overflow-y: unset;
+        }
+        .main_reg {
+            width: unset;
+            margin: auto 0;
+        }
+        .dodatno {
+            margin-top: 20px;
+        }
+        .obavezno {
+            margin-right: 50px;
+        }
+        #btn1 {
+            display: none;
+        }
+        #btn2 {
+            display: unset;
+        }
+        .main_reg > .scroll {
+            display: none;
+        }
+        .form {
+            flex-direction: row;
+        }
+    }
+    @media screen and (min-width: 797px){
+        .nav_log {
+            display: flex;
+        }
+        .HeaderScroll {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .main_reg {
+            width: 900px;
+            margin: auto;
+        }
+        .site_log {
+            background-image: url("../resorces/backgr.jpg");
+        }
+    }
+}

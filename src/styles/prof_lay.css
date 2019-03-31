@@ -1,0 +1,112 @@
+.txt_cont,
+.cont {
+    display: flex;
+}
+.prof_label {
+    margin-top: 5px;
+    margin-left: 7px;
+}
+.prof_form > .obavezno,
+.prof_form > .dodatno {
+    margin-bottom: 20px;
+}
+.txt_cont > .reg_label,
+.cont > .reg_label {
+    font-weight: bold;
+}
+.podatci {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.site_prof {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../resorces/backgr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: unset;
+}
+.main_prof {
+    margin-bottom: auto;
+}
+.prof_form {
+    background-color: white;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: auto;
+    background-repeat: round;
+    border: 2px solid #00a300;
+}
+.prof_form > div {
+    text-align: left;
+    margin-right: 0px;
+}
+@supports (display: grid) {
+    @media screen and (min-width: 400px) {
+        body {
+            font-size: 20px;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        .main_prof {
+            width: 500px;
+            margin: auto;
+            margin-top: 0;
+        }
+    }
+    @media screen and (min-width: 750px) {
+        .site_reg {
+            overflow-y: unset;
+        }
+        .main_reg {
+            width: unset;
+            margin: auto 0;
+        }
+        .dodatno {
+            margin-top: 20px;
+        }
+        .obavezno {
+            margin-right: 50px;
+        }
+        #btn1 {
+            display: none;
+        }
+        #btn2 {
+            display: unset;
+        }
+        .main_reg > .scroll {
+            display: none;
+        }
+
+        .site_prof > .main_prof {
+            margin: auto ;
+        }
+        .podatci > .dodatno {
+            margin-top: 40px;
+        }
+    }
+    @media screen and (min-width: 797px){
+        .nav_log {
+            display: flex;
+        }
+        .HeaderScroll {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .main_reg {
+            width: 900px;
+            margin: auto;
+        }
+        .site_log {
+            background-image: url("../resorces/backgr.jpg");
+        }
+    }
+}

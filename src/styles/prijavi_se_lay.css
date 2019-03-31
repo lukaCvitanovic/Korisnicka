@@ -1,0 +1,237 @@
+:root {
+    --main_log-color: #000;
+    --secondary-color: rgb(111, 152, 190);
+    --complementary-color: rgb(180, 85, 59);
+    --padding: 10px;
+}
+#___gatsby {
+    display: initial;
+}
+#___gatsby > div {
+    display: initial;
+}
+html {
+    display: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body_log {
+    display: initial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+.site_log {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../resorces/backgr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main_log {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 0;
+    margin-bottom: auto;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+}
+.item_log {
+    color: var(--main_log-color, black);
+    text-align: center;
+    padding: var(--padding, 0px);
+}
+.header {
+    background-color: rgb(77, 77, 77);
+    border-bottom: 2px solid #8e8e8e;
+    padding: 0;
+}
+.nav_log {
+    display: none;
+}
+.Layout_nav_log_link_r {
+    margin: auto;
+    margin-left: 0px;
+}
+.Layout_nav_log_link{
+    display: inline-block;
+    padding: 0 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    word-wrap: none;
+    height: 3em;
+    color: white;
+    text-decoration: none;
+}
+.Layout_nav_log_link.active,
+.Layout_nav_log_link.active:hover {
+    background-color: #17be00;;
+}
+.Layout_nav_log_link:hover {
+    background-color: #2e2e2e;
+}
+.login_form {
+    background-color: #a4a4a4;
+    height: 250px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../resorces/gray.jpg");
+    background-size: auto;
+    background-repeat: round;
+    border: 2px solid #00a300;
+
+}
+.login_btn {
+    max-width: 319px;
+    min-width: 275px;
+    height: 50px;
+    background-color: #16ae01;
+    border: 2px solid #16ae01;
+    border-radius: 7px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+.login_btn:hover {
+    background-color: white;
+    color: #16ae01;
+}
+.login_form > input,
+.login_btn {
+    margin: auto;
+}
+.login_form > div {
+    text-align: left;
+    margin-right: 0px;
+}
+.txt {
+    margin-bottom: 20px;
+    color: white;
+    font-size: larger;
+}
+.login_form > input {
+    min-width: 275px;
+    max-width: 319px;
+    height: 2em;
+    font-size: 18px;
+    border: 1px solid black;
+    margin-bottom: 0px;
+}
+.query {
+    display: none;
+}
+#wrongU,
+#wrongP {
+    border: 2px solid red;
+    background-color: #ffcece;
+}
+.error {
+    background-color: rgba(0, 0, 0, 0);
+    height: 40px;
+    width: auto;
+    position: relative;
+    bottom: 10px;
+    text-align: left;
+    display: flex;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+.ertxt {
+    margin: auto;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0);
+}
+#show_div {
+    background-color: #ff3f3f;
+    border: 2px solid red;
+}
+#show_p {
+    color: white;
+}
+@supports (display: grid) {
+    @media screen and (min-width: 400px) {
+        body {
+            font-size: 20px;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        .main_log {
+            width: 500px;
+            margin: 0 auto;
+        }
+        .error {
+            width: 480px;
+        }
+    }
+    @media screen and (min-width: 797px){
+        .nav_log {
+            display: flex;
+        }
+        .HeaderScroll {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 920px) {
+        .login_form {
+            background-color: #a4a4a4;
+            height: 180px;
+            width: 900px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-image: url("../resorces/gray.jpg");
+            background-size: auto;
+            background-repeat: round;
+            border: 2px solid #00a300;
+            margin: 0 auto;
+        }
+        .login_btn {
+            min-width: unset;
+            width: 100px;
+            height: 89px;
+            background-color: #16ae01;
+            border: 2px solid #16ae01;
+            border-radius: 7px;
+            font-size: large;
+            color: white;
+            cursor: pointer;
+        }
+        .main_log {
+            display: flex;
+            flex-direction: column;
+            max-width: unset;
+            width: unset;
+            padding: 0;
+            margin: auto 0;
+            margin-bottom: auto;
+        }
+        .login_form > input {
+            margin-bottom: auto;
+        }
+        .password {
+            margin: auto 0;
+        }
+        .main_log .error {
+            margin: 0 auto;
+            width: 900px;
+        }
+    }
+    @media screen and (min-width: 1300px) {
+        
+        .site_log {
+            background-image: url("../resorces/backgr.jpg");
+        }
+    }
+}

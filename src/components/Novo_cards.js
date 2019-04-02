@@ -10,6 +10,8 @@ const Pics = (list, a) => list.map(el => {
 
 const Tags = (imgs, json, tag) => {
     const crds = [];
+    console.log(imgs);
+    console.log(json);
     for(var i = 0; i < imgs.length; i++) {
         if (imgs[i].node.name.search(tag) !== -1) {
             var temp = [imgs[i],json[i]]

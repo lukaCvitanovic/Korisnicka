@@ -1,0 +1,78 @@
+{
+    "prefix":"fas",
+	"icon":"microchip",
+    "name":"Graficke kartice",
+	"to":"/kategorije/graficke_kartice",
+	"articles":[
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1669,00",
+		"payment":"12",
+		"name":"Grafička kartica PCI-E ASUS Expedition Radeon RX 570",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"4GB DDR5"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1499,00",
+		"payment":"12",
+		"name":"Grafička kartica PCI-E ASUS GeForce GTX 1650 Dual",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"4GB DDR5"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1599,00",
+		"payment":"12",
+		"name":"Grafička kartica PCI-E ASUS GeForce GTX 1650 Rog Strix Gaming Advanced",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"4GB DDR5"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1299,00",
+		"payment":"12",
+		"name":"Grafička kartica PCI-E COLORFUL GeForce GTX 1650 NB",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"4GB DDR5"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"2899,00",
+		"payment":"12",
+		"name":"Grafička kartica PCI-E COLORFUL iGAME GeForce RTX 2060 Ultra",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"6GB GDDR6 "
+		],
+		"new":false,
+		"action":true
+		}
+	}
+	]
+}

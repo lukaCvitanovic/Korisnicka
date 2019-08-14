@@ -175,14 +175,6 @@ html {
             width: 480px;
         }
     }
-    @media screen and (min-width: 797px){
-        .nav_log {
-            display: flex;
-        }
-        .HeaderScroll {
-            display: none;
-        }
-    }
     @media screen and (min-width: 920px) {
         .login_form {
             background-color: #a4a4a4;

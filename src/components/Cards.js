@@ -41,17 +41,18 @@ const Cards = ({jpg, json, num, a}) => {
 
     const crds = Pics(card,a);
     */
+    console.log(json)
     return(
         <div class="cards_cont">
             <div class="labels">
                 <p>Akcija</p>
-                <Link className="labels_link" to="/about" >
+                <Link className="labels_link" to="/akcije" >
                     <p className="labels_p">
                         Prikaži sve
                     </p>
                 </Link>
             </div>
-            <NCards json={json} jpg={jpg} num={parseInt(num)} tag="" a={a} />
+            <NCards json={json[0].node.articles} jpg={jpg} num={parseInt(num)} tag={[]} a={a} />
         </div>
     );
 }
@@ -71,21 +72,34 @@ export default (props) => (
                                     fixed(width: 125, height: 125) {
                                         ...GatsbyImageSharpFixed
                                     }
+                                    f2: fluid(maxWidth: 400, maxHeight: 400) {
+                                        ...GatsbyImageSharpFluid
+                                    }
                             }
                             name
                         }
                     }
                 }
-                json: allLaptopiJson {
+                json: allArticlesJson(filter: {name: {eq: "Laptopi"}}) {
                     edges {
-                        node {
+                      node {
+                        name
+                        articles {
+                          node {
+                            avelable
                             description
-                            price
-                            payment
+                            details
                             name
+                            payment
+                            price
+                            warranty
+                            new
+                            action
+                          }
                         }
+                      }
                     }
-                }
+                  }
             }
         `}
     render={data => <Cards jpg={data.jpg.edges} json={data.json.edges} num={props.num} a={props.a} />}

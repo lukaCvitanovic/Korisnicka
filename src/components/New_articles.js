@@ -75,17 +75,24 @@ class NUP extends Component {
 
 */
 
+        var props_json = []
+        for(var i = 0; i<this.props.json.length; i++) {
+            for(var j = 0; j<this.props.json[i].node.articles.length; j++) {
+                props_json.push(this.props.json[i].node.articles[j])
+            }
+        }
+
         return(
             <div className="nup">
                 <div class="labels">
                     <p>Novo u Prodaji</p>
-                    <Link className="labels_link" to="/about" >
+                    <Link className="labels_link" to="/novo" >
                         <p className="labels_p">
                             Prikaži sve
                         </p>
                     </Link>       
                 </div>
-                <NCards json={this.props.json} jpg={this.props.jpg} num={this.state.num} tag="" a={this.props.a}/>
+                <NCards json={props_json} jpg={this.props.jpg} num={this.state.num} tag={["new"]} a={this.props.a}/>
                 <div className="prosiri" onClick={this.click}>
                     <p>{this.state.expand_btn}</p>
                 </div>
@@ -98,7 +105,7 @@ export default (props) => (
     <StaticQuery
     query={graphql`
         query nup {
-            jpg: allFile(filter:{relativePath:{regex:"/Laptopi/"},extension:{eq:"jpg"}})
+            jpg: allFile(filter: {extension:{eq:"jpg"}})
             {
                 edges
                 {
@@ -109,21 +116,34 @@ export default (props) => (
                                 fixed(width: 125, height: 125) {
                                     ...GatsbyImageSharpFixed
                                 }
+                                f2: fluid(maxWidth: 400, maxHeight: 400) {
+                                    ...GatsbyImageSharpFluid
+                                }
                         }
                         name
                     }
                 }
             }
-            json: allLaptopiJson {
+            json: allArticlesJson(filter: {name: {ne: "db"}}) {
                 edges {
-                    node {
+                  node {
+                    name
+                    articles {
+                      node {
+                        avelable
                         description
-                        price
-                        payment
+                        details
                         name
+                        payment
+                        price
+                        warranty
+                        new
+                        action
+                      }
                     }
+                  }
                 }
-            }
+              }
         }
     `}
     render={data => <NUP jpg={data.jpg.edges} json={data.json.edges} small={props.small} a={props.a} />}

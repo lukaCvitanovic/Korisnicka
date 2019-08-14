@@ -1,0 +1,116 @@
+{
+    "prefix":"fas",
+	"icon":"mobile-alt",
+    "name":"Pametni mobiteli",
+	"to":"/kategorije/pametni_mobiteli",
+	"articles":[
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1661,55",
+		"payment":"12",
+		"name":"Pametni mobitel HUAWEI P20 Lite",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"5.84\"",
+		"4GB",
+		"64GB",
+		"Android 8.0",
+		"crno"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"2659,05",
+		"payment":"12",
+		"name":"Pametni mobitel XIAOMI Pocophone F1",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"6.18\"",
+		"6GB",
+		"128GB",
+		"Android 8.1",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"901,55",
+		"payment":"12",
+		"name":"Pametni mobitel MEIZU M6 Note",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"5,5\"",
+		"3GB",
+		"32GB",
+		"Android 7.1",
+		"crno"
+		],
+		"new":true,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"2754,05",
+		"payment":"12",
+		"name":"Pametni mobitel HUAWEI P20",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"5,8\"",
+		"4GB",
+		"64GB",
+		"Android 8.1",
+		"ljubičasti"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1299,00",
+		"payment":"12",
+		"name":"Pametni mobitel LG Q Stylus",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"6,2\"",
+		"3GB",
+		"32GB",
+		"Android 8.1",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1299,00",
+		"payment":"12",
+		"name":"Pametni mobitel XIAOMI Mi 8 Lite",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"6,26\"",
+		"4GB",
+		"64GB",
+		"Android 8.1",
+		"crno"
+		],
+		"new":false,
+		"action":true
+		}
+	}
+	]
+}

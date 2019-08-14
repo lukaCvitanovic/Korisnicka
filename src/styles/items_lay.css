@@ -1,0 +1,108 @@
+.itm {
+    width: auto;
+}
+.item_name {
+    font-size: larger;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+}
+.content {
+    display: flex;
+    padding: 0px 10px;
+    flex-direction: column;
+}
+.pic {
+    width: auto;
+    height: auto;
+    max-width: 400px;
+}
+.items_cijena {
+    border: solid 1px gray;
+}
+.sub_cijena {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: left;
+}
+#cijena {
+    display: flex;
+    flex-direction: row;
+}
+#sub_cijena_price {
+    color: red;
+    font-size: larger;
+}
+#sub_cijena_text {
+    font-weight: bold;
+    margin-top: auto;
+    margin-right: 7px;
+}
+#placanje {
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+.opis {
+    padding: 10px 14px;
+    text-align: left;
+}
+.opis hr {
+    margin: 7px 0;
+}
+.opis > p {
+    font-weight: bold;
+}
+.detalji_itms p {
+    font-weight: bold;
+}
+.preporuke {
+    margin-top: 30px;
+}
+#preporuke_text {
+    text-align: left;
+    font-size: 22px;
+    margin-left: 14px;
+    color: green;
+}
+@supports (display: grid) {
+    @media screen and (min-width: 435px) {
+        .pic {
+            width: 400px;
+            height: 400px;
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media screen and (min-width: 600px) {
+        .itm {
+            margin: auto;
+        }
+    }
+    @media screen and (min-width: 870px) {
+        .itm {
+            width: 600px;
+        }
+        .items_cijena {
+            margin: auto;
+        }
+        .sub_cijena {
+            max-width: 300px;
+        }
+    }
+    @media screen and (min-width: 1100px) {
+        .itm {
+            width: 800px;
+        }
+        .content {
+            flex-direction: row;
+        }
+        .content > .pic {
+            margin-right: 0px;
+        }
+        .items_cijena {
+            margin-left: 20px;
+        }
+    }
+}

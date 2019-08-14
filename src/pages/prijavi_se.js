@@ -31,10 +31,11 @@ class Login extends Component {
     
         const verdict = this.compare(uname, pass, data);
         console.log(verdict);
+        console.log(uname)
 
         if(verdict) {
             var a = {before: this.props.location.pathname, user: uname};
-            navigate(state.before, {state: {a},});
+            navigate(state.before, {state: a});
         }
         else {
             this.wrongEntry();
@@ -79,6 +80,12 @@ class Login extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = "Prijavi se"
+        const usern_input = document.getElementsByClassName("username")[0]
+        usern_input.focus()
+    }
+
     render() {
         var cond = this.checkUser();
         if(cond) {
@@ -86,7 +93,8 @@ class Login extends Component {
         }
         const data = {page: this.props.location.pathname, 
             user: this.props.location.state.user};
-            console.log(data);
+        console.log(data);
+
         return(
             <body className="body_log">
                 <Header data={data} />

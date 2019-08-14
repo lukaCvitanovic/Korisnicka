@@ -1,0 +1,97 @@
+{
+    "prefix":"fas",
+	"icon":"microchip",
+    "name":"Procesori",
+	"to":"/kategorije/procesori",
+	"articles":[
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1599,00",
+		"payment":"12",
+		"name":"Procesor AMD Ryzen 5 2400G BOX",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"s. AM4",
+		"3.9GHz",
+		"6MB cache",
+		"Quad Core",
+		"RX Vega",
+		"Wraith Stealth cooler"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"2199,00",
+		"payment":"12",
+		"name":"Procesor INTEL Core i5 8400 BOX",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"s. 1151",
+		"3.10GHz",
+		"9MB cache",
+		"HexaCore"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1149,00",
+		"payment":"12",
+		"name":"Procesor INTEL Core i5 8600 BOX",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"s. 1151",
+		"2.8GHz",
+		"9MB cache",
+		"HexaCore"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"4199,00",
+		"payment":"12",
+		"name":"Procesor INTEL Core i9 9900KF BOX",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"s. 1151",
+		"3.6GHz",
+		"16MB cache",
+		"OctaCore",
+		"bez hladnjaka"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1305,66",
+		"payment":"12",
+		"name":"Procesor AMD Ryzen 5 3400G BOX",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"s. AM4",
+		"3.7GHz",
+		"QuadCore",
+		"RX Vega",
+		"Wraith Stealth"
+		],
+		"new":false,
+		"action":false
+		}
+	}
+	]
+}

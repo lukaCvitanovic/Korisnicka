@@ -141,14 +141,6 @@ h2 {
             flex-direction: row;
         }
     }
-    @media screen and (min-width: 797px){
-        .nav_log {
-            display: flex;
-        }
-        .HeaderScroll {
-            display: none;
-        }
-    }
     @media screen and (min-width: 900px) {
         .main_reg {
             width: 900px;

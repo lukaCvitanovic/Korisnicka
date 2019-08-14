@@ -2,5 +2,169 @@
     "prefix":"fas",
 	"icon":"laptop",
     "name":"Laptopi",
-	"to":"/about"
+	"to":"/kategorije/laptopi",
+	"articles":[
+	{
+    "node":{
+		"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"3134,05",
+		"payment":"12",
+		"name":"Laptop HP 250 5PP14EA",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"Core i3 7020U",
+		"DVDRW",
+		"8GB",
+		"256GB SSD",
+		"Radeon 520",
+		"15.6\" FHD",
+		"FreeDOS",
+		"sivo"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"1899,05",
+		"payment":"12",
+		"name":"Laptop HP 15 7SE67EA",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"DualCore A4-9120",
+		"4GB",
+		"256GB SSD",
+		"Radeon R3",
+		"15.6\" FHD",
+		"DOS",
+		"crno"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"4939,05",
+		"payment":"12",
+		"name":"Laptop ACER Nitro 5 NH.Q3REX.019",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"Ryzen 5 2500U",
+		"8GB",
+		"1TB HDD",
+		"Radeon RX 560X 4GB",
+		"15.6\" FHD IPS",
+		"Linux",
+		"crno"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"3324,05",
+		"payment":"12",
+		"name":"Laptop ACER Aspire 3 NX.GY9EX.020",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"Ryzen 5 2500U",
+		"4GB",
+		"256GB SSD",
+		"Radeon RX Vega 8",
+		"15.6\" LED FHD",
+		"Linux",
+		"crno"
+		],
+		"new":true,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"8549,05",
+		"payment":"12",
+		"name":"Laptop DELL Inspiron 3779",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"Core i7 8750H",
+		"16GB",
+		"1TB HDD + 128GB SSD",
+		"GeForce GTX 1050Ti 4GB",
+		"17.3\" LED FHD",
+		"Linux",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"4559,05",
+		"payment":"12",
+		"name":"Laptop LENOVO IdeaPad 330 81DE01SYSC",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"Core i5 8250U",
+		"8GB DDR4",
+		"256GB SSD",
+		"GeForce MX150",
+		"15,6\" FHD",
+		"DOS",
+		"sivo"
+		],
+		"new":true,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"3229,05",
+		"payment":"12",
+		"name":"Laptop LENOVO IdeaPad L340 81LY002QSC",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"Ryzen 3 3200U",
+		"8GB DDR4",
+		"256GB SSD",
+		"AMD Radeon Vega 3",
+		"17,3\" FHD",
+		"DOS",
+		"crno"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"8929,05",
+		"payment":"12",
+		"name":"Laptop ASUS FX705DU-AU028",
+		"avelable":true,
+		"warranty":"24",
+		"details":[
+		"Ryzen 7 3750H",
+		"16GB",
+		"512GB SSD",
+		"GeForce GTX 1660Ti 6GB",
+		"17.3\" IPS FHD",
+		"FreeDOS",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	}
+	]
 }

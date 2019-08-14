@@ -1,0 +1,126 @@
+{
+    "prefix":"fas",
+	"icon":"desktop",
+    "name":"Stolna racunala",
+	"to":"/kategorije/stolna_racunala",
+	"articles":[
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"5399,00",
+		"payment":"12",
+		"name":"Računalo LINKS Gaming Argon G10I",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"DualCore i3 7100",
+		"8GB DDR4",
+		"1TB HDD",
+		"DVDRW",
+		"Radeon RX 580 8GB",
+		"AV"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"10829,05",
+		"payment":"12",
+		"name":"Računalo HP OMEN 880-133na DT 4NF53EA",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"Core i7 8700K",
+		"8GB DDR4",
+		"1TB HDD",
+		"DVDRW",
+		"GeForce GTX 1060 6GB",
+		"DOS",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"5699,00",
+		"payment":"12",
+		"name":"Računalo LINKS Gaming G12I",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"QuadCore i3 8100",
+		"8GB DDR4",
+		"480GB SSD",
+		"GeForce GTX 1660Ti 6GB",
+		"AV",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"3999,00",
+		"payment":"12",
+		"name":"Računalo LINKS Gaming Radon M20I",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"DualCore G4560",
+		"8GB DDR4",
+		"DVDRW",
+		"1000GB",
+		"Radeon RX 570 4GB",
+		"AV",
+		"crno"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"7219,05",
+		"payment":"12",
+		"name":"Računalo LINKS Gaming S1WIN",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"HexaCore Ryzen 5 1600",
+		"8GB DDR4",
+		"DVDRW",
+		"1000GB + 120GB SSD",
+		"GeForce GTX 1660Ti 6GB",
+		"AV",
+		"Windows 10 Home"
+		],
+		"new":false,
+		"action":false
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"4599,00",
+		"payment":"12",
+		"name":"Računalo LINKS Multimedia M13AW",
+		"avelable":true,
+		"warranty":"36",
+		"details":[
+		"QuadCore Ryzen 5 2400G",
+		"8GB DDR4",
+		"DVDRW",
+		"1000GB + 240GB SSD",
+		"Radeon RX Vega 11",
+		"AV",
+		"Windows 10 Home"
+		],
+		"new":false,
+		"action":false
+		}
+	}
+	]
+}

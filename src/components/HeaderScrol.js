@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby"
+import { navigate } from "@reach/router";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // list of items
 const list = [
@@ -9,15 +11,14 @@ const list = [
     { name: 'akcije', to:"/akcije" },
     { name: 'košarica', to:"/kosarica" },
     { name: 'profil', to:"/profil" },
-    { name: 'registriraj se', to:"/registriraj_se" },
-    { name: 'prijavi se', to:"/prijavi_se" }
+    { name: 'registriraj se', to:"/registriraj_se" }
   ];
    
   // One item component
   // selected prop will be passed
   const MenuItem = ({ text, to, data }) => {
     return (
-        <div  className="menu-item">
+        <div className="menu-item">
             <Link className = "Layout_nav_link" to={to} state={{before: data.page, user: data.user}} activeClassName="active" >
                 {text}
             </Link>  
@@ -33,7 +34,6 @@ const list = [
     );
   });
    
-   
   const Arrow = ({ text, className }) => {
     return (
         <div  className={className}>
@@ -47,6 +47,39 @@ const list = [
   const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
    
   class HeaderScroll extends Component {
+    logOf = (data) => {
+      const nav = document.getElementsByClassName('nav')[0]
+      if(nav === undefined) {
+        document.getElementsByClassName('HeaderScroll1')[0].className = "HeaderScroll"
+        document.getElementsByClassName('nav1')[0].className = "nav"
+      }
+      navigate(data.page, {state: {before: data.page, user: "guest"}})
+      //this.check()
+    }
+
+    createULink = (data) => {
+      if((data.user !== undefined) && (data.user !== "guest")) {
+        return(
+            <div className="user_link">
+                <FontAwesomeIcon className="user_icon" icon={['fas', 'user-circle']} size="2x" />
+                <p>{data.user}</p>
+                <div className = "odjava" onClick={() => { this.logOf(data); }} >
+                    Odjavi se
+                </div>
+            </div>
+        )
+      }
+      else {
+          return(
+              <div className="menu-item">
+                <Link className = "Layout_nav_link" to="/prijavi_se" state={{before: data.page, user: data.user}} activeClassName="active" >
+                    Prijavi se
+                </Link>
+              </div>
+          )
+      }
+    }
+
     state = {
       selected: 0
     };
@@ -54,13 +87,30 @@ const list = [
     onSelect = key => {
       this.setState({ selected: key });
     }
-   
+
+    check() {
+      const odjava = document.getElementsByClassName('odjava')[0]
+      const nav = document.getElementsByClassName('nav')[0]
+      if(odjava === undefined && nav === undefined) {
+        document.getElementsByClassName('HeaderScroll1')[0].className = "HeaderScroll"
+        document.getElementsByClassName('nav1')[0].className = "nav"
+      }
+      else if(odjava !== undefined && nav !== undefined) {
+        document.getElementsByClassName('HeaderScroll')[0].className = "HeaderScroll1"
+        document.getElementsByClassName('nav')[0].className = "nav1"
+      }
+    }
+
+    componentDidMount() {
+      this.check()
+    }
     
     render() {
       const { selected } = this.state;
       // Create menu from items
-      //console.log(list[0]);
-      const menu = Menu(list, this.props.data);
+      var menu = Menu(list, this.props.data);
+      const login = this.createULink(this.props.data)
+      menu.push(login)
    
       return (
         <div className="HeaderScroll">

@@ -12,6 +12,7 @@ var id = "";
 class Kosarica extends Component {
     constructor(props) {
         super(props);
+        this.notify = this.notify.bind(this)
         this.checkUser = this.checkUser.bind(this);
         this.mycallback = this.mycallback.bind(this);
         this.Kositems = this.Kositems.bind(this);
@@ -113,15 +114,20 @@ class Kosarica extends Component {
             navigate('/prijavi_se', {state: {a},});
         }
     }
-    removeAll = () => {
-        localStorage.setItem('kosarica', JSON.stringify([]));
 
+    removeAll = () => {
         const kositem = document.getElementsByClassName('kositem');
-        for(var i=kositem.length-1;i>0;i--) {
-            kositem[i].remove();
+        if (kositem.length !== 0) {
+            localStorage.setItem('kosarica', JSON.stringify([]));
+            localStorage.setItem('kupi', JSON.stringify([]));
+            for(var i=kositem.length-1;i>0;i--) {
+                kositem[i].remove();
+            }
+            kositem[0].remove();
+            this.calculate(0)
         }
-        kositem[0].remove();
     }
+
     calculate = (q) => {
         console.log("q: "+q);
         if(q === 0) {
@@ -210,14 +216,27 @@ class Kosarica extends Component {
     }
 
     notify = () => {
-        document.querySelector('div.notif').setAttribute('id', 'notif_show');
-        setTimeout(function (){
-            document.querySelector('div.notif').setAttribute('id', '');
-        }, 3000);
+        const kositem = document.getElementsByClassName('kositem');
+        console.log("notify")
+        if (kositem.length !== 0) {
+            this.removeAll()
+            document.querySelector('div.notif').setAttribute('id', 'notif_show');
+            setTimeout(function (){
+                const notif = document.querySelector('div.notif')
+                if (notif !== null) {
+                    notif.setAttribute('id', '');
+                }
+            }, 3000);
+        }
     }
 
     notif_exit = () => {
         document.querySelector('div.notif').setAttribute('id', '');
+    }
+
+    componentDidMount() {
+        document.title = "Košarica"
+        //console.log(document.querySelector('div.notif'))
     }
 
     render() {
@@ -229,8 +248,6 @@ class Kosarica extends Component {
         this.Kositems(this.state.num_kos);
         
         this.calculate(this.state.num);
-
-        //console.log(this.state.kos_items);
 
         //za spremanje kupi korisit localstorage umjesto setState jer se nakon
         //brisanja elementa stranica ponovo ucitaje pa se sva stanja vracaju na
@@ -252,7 +269,7 @@ class Kosarica extends Component {
                                 <div className="iznos_div">
                                     <p className="bold">Broj proizvoda: {this.state.amount}</p>
                                 </div>
-                                <button className="empty" onClick={ () => {this.removeAll();}}>Isprazni kosaricu</button>
+                                <button className="empty" onClick={ () => {this.removeAll();}}>Isprazni košaricu</button>
                                 <div className="proizvodi">
                                     <p id={id} className="full">Košarica je prazna</p>
                                     {this.state.kos_items}

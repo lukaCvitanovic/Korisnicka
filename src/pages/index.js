@@ -20,20 +20,23 @@ const userStatus = (location) => {
 }
 
 class Index extends Component {
+    componentDidMount() {
+        document.title = "Početna"
+    }
+
     render() {
         userStatus(this.props.location);
         const data = {page: this.props.location.pathname
             , user: this.props.location.state.user};
 
         //const data = {page: "/", user: "guest"};
-        console.log(data);
         return (
             <body>
                 <div class="site">
                     <Header data={data} />
                     <main class="item main">
-                        <Search />
-                        <Menu />
+                        <Search d={data}/>
+                        <Menu d={data} />
                         <Cards num="4" a={data} />
                         <NUP small="4" a={data} />
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>

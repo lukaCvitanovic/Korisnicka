@@ -7,7 +7,7 @@ function Footer() {
         <footer class="item footer">
             <div class="links" id="li1">
                 <p className="sluzba">Služba za korisnike</p>
-                <Link className="o_nama" to="/about" >
+                <Link className="o_nama" to="/o_nama" >
                     <p>O nama</p>
                 </Link>
             </div>

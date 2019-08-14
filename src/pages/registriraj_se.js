@@ -60,6 +60,10 @@ class Register extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = "Registriraj se"
+    }
+
     render() {
         const data = {page: this.props.location.pathname, 
                      user: this.props.location.state.user};

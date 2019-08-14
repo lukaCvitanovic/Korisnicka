@@ -18,7 +18,7 @@
     background-image: url("../resorces/backgr.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-y: scroll;
+    overflow-y: scroll
 }
 .kos_price {
     color: red;
@@ -63,7 +63,7 @@
 }
 .kositem {
     border: 1px solid green;
-    width: 100%;
+    width: 297px;
     padding: var(--padding, 0px);
     color: var(--secondary-color, black);
     cursor: pointer;

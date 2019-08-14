@@ -22,6 +22,7 @@ body {
     display: initial;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
+    overflow: hidden;
 }
 .site {
     display: flex;
@@ -105,6 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
+    background-color: white;
 }
 .cards {
     display: grid;
@@ -133,7 +135,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: initial;
-    background-color: #9b9b9b;;
+    background-color: rgb(77, 77, 77);
     padding: 0;
 }
 .o_nama {
@@ -141,7 +143,7 @@ body {
     text-decoration: none;
 }
 .o_nama:hover {
-    text-decoration: underline;
+    color: orange;
 }
 .dropdown_btn,
 .dropdown_btn_link {
@@ -152,18 +154,38 @@ body {
     height: 1.8em;
     background-color: white;
     border: none;
+    width: 97%;
+    margin-left: 4px;
 }
-.dropdown_btn > svg {
+.dropdown_btn > svg ,
+.dropdown_btn_active > svg{
     margin-left: auto;
     margin-right: 0.7rem;
+}
+.dropdown_btn_active {
+    display: none;
+    background-color: rgb(0, 94, 0);
+    color: white;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    width: 97%;
+    text-align: left;
+    font-size: 18px;
+    height: 1.8em;
+    border: none;
 }
 .dropdown_content {
     display: none;
     text-align: left;
     padding-left: 1.5em;
 }
-.dropdown {
+.dropdown,
+.dropdown_links {
     height: auto;
+}
+.dd_div :hover {
+    background-color: #e8e8e8;
+    color: orange;
 }
 .dropdown_btn_link {
     cursor: pointer;
@@ -173,8 +195,41 @@ body {
 .dropdown_btn_p {
     margin-left: 0.75rem;
 }
-.cat_link {
+.subname,
+.subname2 {
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.subname2 {
+    margin-bottom: 5px;
+}
+.subname:hover,
+.subname2:hover {
+    border: solid 1px rgb(0, 94, 0);
+    cursor: pointer;
+}
+.cat_link,
+.cat_link3 {
     text-decoration: none;
+    color: black;
+}
+.cat_link3 {
+    padding-left: 7px;
+}
+.cat_link2 {
+    text-decoration: none;
+    color: black;
+    margin-right: 4px;
+    padding-left: 7px;
+}
+.cat_link :hover {
+    background-color: #e8e8e8;
+    color: orange;
+}
+.cat_link2:hover {
+    border: solid 1px rgb(0, 94, 0);
+    cursor: pointer;
 }
 .cat_label {
     font-size: 28px;
@@ -186,12 +241,52 @@ body {
     margin: 0 4px;
     color: green;
 }
-.nav {
+.nav,
+.nav1 {
     display: none;
+}
+.odjava {
+    margin-left: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    word-wrap: none;
+    height: 3em;
+    color: white;
+    background-color: rgb(113, 113, 113);
+    text-decoration: none;
+}
+.odjava:hover {
+    color: orange;
+}
+.Layout_nav_link_l {
+    display: flex;
 }
 .Layout_nav_link_r {
     margin: auto;
     margin-left: 0px;
+}
+.user_icon {
+    align-self: center;
+    color: #17bf00;
+    margin-right: 5px;
+    background-image: radial-gradient(white, white,white, transparent,transparent,transparent);
+}
+.user_link {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.75rem;
+    cursor: context-menu;
+    white-space: nowrap;
+    line-height: 3.5rem;
+    letter-spacing: 0.03em;
+    word-wrap: none;
+    height: 3em;
+    color: white;
+    background-color: rgb(113, 113, 113);
+    text-decoration: none;
 }
 .Layout_nav_link{
     display: inline-block;
@@ -208,10 +303,12 @@ body {
 }
 .Layout_nav_link.active,
 .Layout_nav_link.active:hover {
-    background-color: #17be00;;
+    background-color: #17be00;
+    color: white;
 }
 .Layout_nav_link:hover {
     background-color: #2e2e2e;
+    color: orange;
 }
 .kategorije{
     padding: 0px;
@@ -223,8 +320,14 @@ body {
     background-color: rgb(77, 77, 77);
     padding: 0;
 }
+.menu-wrapper--inner {
+    display: flex;
+}
+.menu-wrapper--inner .menu-item-wrapper.active {
+    border: none;
+}
 .sluzba {
-    color: green;
+    color: #1ce701;
     font-size: 25px;
 }
 .labels {
@@ -235,7 +338,7 @@ body {
 .labels > p {
     margin-right: 15px;
     color: red;
-    font-size: x-large;
+    font-size: xx-large;
 }
 .labels_link {
     display: inline-table;
@@ -246,8 +349,8 @@ body {
     cursor: pointer;
 }
 .labels_link :hover {
-    text-decoration: underline;
-    text-decoration-color: green;
+    color: rgb(255, 166, 0);
+    font-weight: bold;
 }
 .search_box > input {
     width: 257px;
@@ -267,6 +370,22 @@ body {
     border-width: thin;
     border-color: gray;
     border-radius: 18px;
+}
+.autocomplete-items {
+    border: 1px solid gray;
+    border-top: none;
+    width: 319px;
+    margin: 0 auto;
+}
+.suggestions {
+    cursor: pointer;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.suggestions:hover {
+    background-color: #e8e8e8;
 }
 .icons {
     display: table;
@@ -297,14 +416,15 @@ body {
 }
 .icon {
     display: flex;
-    background-color: green;
+    background-color: white;
     text-decoration: none;
     flex-direction: column;
+    border: solid 2px green;
 }
 .icon > p {
     margin: auto;
     margin-top: 0;
-    color: white;
+    color: green;
     font-weight: bold;
     font-size: medium;
 }
@@ -313,7 +433,7 @@ body {
 }
 .icon > svg {
     margin: auto;
-    color: white;
+    color: green;
 }
 .prosiri {
     display: inline-block;
@@ -357,7 +477,7 @@ body {
 }
 .icons > a {
     display: inline-block;
-    color: green;
+    color: #17bf00;;
 }
 .icons > a:first-child {
     margin-right: 1rem;
@@ -408,12 +528,79 @@ body {
     height: 100px;
     width: 200px;
 }
-
+.subname_line {
+    color: green;
+}
+.opisi {
+    display: flex;
+    padding-left: 10px;
+    align-items: baseline;
+    flex-direction: column;
+}
+.info {
+    margin-top: 20px;
+}
+.detalji {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+.detalji p {
+    font-weight: normal;
+    text-align: initial;
+}
+.new_star {
+    font-size: 1.5em;
+    color: red;
+}
+#new_star_div {
+    display: inline-block;
+    margin: 0 10px 0 auto;
+}
+.new_perc {
+    font-size: 1.5em;
+    color: #179100;
+}
+#new_perc_div {
+    display: inline-block;
+    margin: 0 auto 0 10px;
+}
+.new_div .tooltiptext_r,
+.new_div .tooltiptext_l {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(209, 209, 209);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.new_div .tooltiptext_r {
+    top: -5px;
+    right: 105%; 
+}
+.new_div .tooltiptext_l {
+    top: -5px;
+    left: 105%; 
+}
+.new_div:hover .tooltiptext_r,
+.new_div:hover .tooltiptext_l {
+    visibility: visible;
+}
+.new_icons {
+    display: flex;
+    height: 31.25px;
+}
 @supports (display: grid) {
     .search {
         grid-area: showcase;
     }
-    .cards_cont {
+    .cards_cont,
+    .itm {
         grid-area: main;
         padding: 7px 5px;
     }
@@ -476,7 +663,7 @@ body {
     }
     @media screen and (min-width: 517px) {
         .footer {
-            background-color: #9b9b9b;
+            background-color: rgb(77, 77, 77);;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 120px;
@@ -515,15 +702,26 @@ body {
         .cat_label {
             margin-bottom: 1.25rem;
         }
-        .dropdown_btn {
+        .dropdown_btn,
+        .dropdown_btn_active {
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
         .kategorije {
             border-right: 2px solid #8e8e8e;
         }
     }
-    @media screen and (min-width: 797px){
+    @media screen and (min-width: 800px){
+        .main {
+            grid-template-columns: 270px 1fr 1fr;
+            grid-template-areas:
+                "aside showcase showcase"
+                "aside main main"
+                "aside nup nup";
+        }
+    }
+    @media screen and (min-width: 810px){
         .nav {
             display: flex;
         }
@@ -534,13 +732,12 @@ body {
             max-width: 400px;
         }
     }
-    @media screen and (min-width: 800px){
-        .main {
-            grid-template-columns: 270px 1fr 1fr;
-            grid-template-areas:
-                "aside showcase showcase"
-                "aside main main"
-                "aside nup nup";
+    @media screen and (min-width: 897px) {
+        .nav1 {
+            display: flex;
+        }
+        .HeaderScroll1 {
+            display: none;
         }
     }
     @media screen and (min-width: 930px) {
@@ -557,7 +754,7 @@ body {
             margin-left: auto;
             margin-right: auto;
             border-right: 2px solid #8e8e8e;
-            background-color: white;
+            
         }
         .kategorije {
             border-left: 2px solid #8e8e8e;

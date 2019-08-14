@@ -1,0 +1,81 @@
+{
+    "prefix":"fas",
+	"icon":"plug",
+    "name":"Kabeli",
+	"to":"/kategorije/kabeli",
+	"articles":[
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"13,72",
+		"payment":"12",
+		"name":"Adapter DELOCK",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"15-pin SATA na 6-pin PCI-E",
+		"za VGA"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"24,50",
+		"payment":"12",
+		"name":"Adapter DELOCK 3.5 mm",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"3.5 mm stereo audio jack (M) na 2x 3.5 mm stereo audio jack (Ž) "
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"489,02",
+		"payment":"12",
+		"name":"Apple Lightning Digital AV HDMI Adapter",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"md826zm/a"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"24,50",
+		"payment":"12",
+		"name":"Bracket DELOCK",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"interni COM na serijski port low profile (DB9)",
+		"40cm"
+		],
+		"new":false,
+		"action":true
+		}
+	},
+	{
+    "node":{"description":"Maticna ploča:Chipset Intel B250 Procesor:Intel i3 7100 (3.9 GHz) Memorija:8 GB DDR4",
+		"price":"67,62",
+		"payment":"12",
+		"name":"Kabel audio CELLULARLINE NEW 2016",
+		"avelable":true,
+		"warranty":"12",
+		"details":[
+		"3.5mm (M) na 3.5mm (M)",
+		"bijeli"
+		],
+		"new":false,
+		"action":true
+		}
+	}
+	]
+}

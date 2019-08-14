@@ -3,40 +3,50 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/prof_lay.css";
 import { navigate } from "gatsby";
-/*
-const returnUserData = (user) => {
-    const userData = JSON.parse(localStorage.getItem('userData'));
 
-    for(var i = 0;i<userData.length;i++) {
-        if(user === userData[i].uname)
-        return userData[i];
-    }
-
-    return null;
-}*/
 
 class Profil extends Component {
     constructor(props) {
         super(props);
         this.checkUser = this.checkUser.bind(this);
     }
+    
+    returnUserData = (user) => {
+        const userData = JSON.parse(localStorage.getItem('userData'));
+    
+        for(var i = 0;i<userData.length;i++) {
+            if(user === userData[i].uname)
+            return userData[i];
+        }
+        
+        return null
+    }
 
     checkUser = () => {
-        if(window.history.state.a) {
-            this.props.location.state = {before: window.history.state.a.before, user: window.history.state.a.user};
+        if(window.history.state) {
+            this.props.location.state = {before: window.history.state.before, user: window.history.state.user};
         }
         else {
             const a = {before: this.props.location.pathname, user: this.props.location.state.user};
-            navigate('/prijavi_se', {state: {a},});
+            navigate('/prijavi_se', {state: a});
         }
     }
+
+    componentDidMount() {
+        document.title = "Profil"
+    }
+
     render() {
         this.checkUser();
         const data = {page: this.props.location.pathname, 
             user: this.props.location.state.user};
-        console.log(window.history.state);
-        const userData = {uname: "admin", name: "luka", sname: "cvi", adr: "don", ziro: "123"};
-        //const userData = returnUserData(window.history.state.a.uname);
+        
+        var userData = this.returnUserData(window.history.state.user);
+        if(userData === null) {
+            userData = {uname: "admin", name: "luka", sname: "cvi", adr: "don", ziro: "123"};
+            const a = {before: this.props.location.pathname, user: this.props.location.state.user};
+            navigate('/prijavi_se', {state: a});
+        }
 
         return(
             <body>

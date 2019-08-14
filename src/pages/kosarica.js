@@ -21,7 +21,6 @@ class Kosarica extends Component {
     }
 
     mycallback = (childData) => {
-        console.log("callback");
         this.calculate(0);
     }
 
@@ -56,50 +55,34 @@ class Kosarica extends Component {
     }
 
     Kositems = (q) => {
-        console.log("q: "+q);
         if(q === 0) {
             var data;
             if(localStorage.getItem('kosarica') !== '[]') {
                 data = JSON.parse(localStorage.getItem('kosarica'));
                 if(data !== []) {
-                    console.log("data !== []");
                     const ret = this.Kositems_render(data);
-                    //document.querySelector('kos_full').setAttribute('id', '');
                     id = "";
                     this.setState({kos_items: ret, num_kos: 1});
-                    //return ret;
                 }
                 else {
-                    console.log("data === []");
-                    //document.querySelector('kos_full').setAttribute('id', 'kos_empty');
                     id = "kos_empty";
-                    this.setState({num_kos: 1});/* */
-                    //return(<p>Košarica je prazna</p>);
+                    this.setState({num_kos: 1});
                 }
             }
             else if(localStorage.getItem('kupi') !== '[]') {
                 data = JSON.parse(localStorage.getItem('kupi'));
-                console.log(data);
                 if(data !== []) {
                     const ret = this.Kositem_render(data);
                     id = "";
-                    //document.querySelector('p.kosFull').setAttribute('id', 'kos_empty');
                     this.setState({kos_items: ret, num_kos: 1});
-                    console.log(this.state.kos_items);
-                    //return ret;
                 }
                 else {
-                    console.log("empty");
                     id = "kos_empty";
-                    //document.querySelector('kos_full').setAttribute('id', 'kos_empty');
-                    this.setState({num_kos: 1});/**/
-                    //return(<p>Košarica je prazna</p>);
+                    this.setState({num_kos: 1});
                 }
             }
             else {
-                console.log("all empty");
                 id = "kos_empty";
-
                 this.setState({num_kos: 1});
             }
         }
@@ -129,14 +112,11 @@ class Kosarica extends Component {
     }
 
     calculate = (q) => {
-        console.log("q: "+q);
         if(q === 0) {
             var data;
             var price;
-            //process.nextTick();
 
             if(localStorage.getItem('kosarica') !== '[]') {
-                console.log("kos");
                 data = JSON.parse(localStorage.getItem('kosarica'));
 
                 price = 0;
@@ -146,69 +126,44 @@ class Kosarica extends Component {
                 }
 
                 if(data.length === 0) {
-                    console.log("data.length === 0");
                     id = "kos_empty";
-                    //document.querySelector('kos_full').setAttribute('id', 'kos_empty');
-                    this.setState({price: price, amount: data.length, num: 1});/**/
-                }
-                else {
-                    console.log("data.length !== 0");
-                    id = "";
-                    //document.querySelector('kos_full').setAttribute('id', '');
                     this.setState({price: price, amount: data.length, num: 1});
                 }
-
-                //return {price: price, amount: data.length, num: 1};
+                else {
+                    id = "";
+                    this.setState({price: price, amount: data.length, num: 1});
+                }
             }
             else if(localStorage.getItem('kupi') !== '[]') {
-                console.log("kupi");
-                
                 data = JSON.parse(localStorage.getItem('kupi'));
-
                 price = parseInt(data.price);
-                console.log(data);
                 
                 if(data.amount !== undefined) {
-                    console.log("unid");
                     var amount = data.amount;
 
                     if(amount === 0) {
-                        console.log("praz");
                         id = "kos_empty";
-                        //document.querySelector('kos_full').setAttribute('id', 'kos_empty');
-                        this.setState({price: price, amount: amount, num: 1});/**/
-                        console.log(this.state.kos_items);
+                        this.setState({price: price, amount: amount, num: 1});
                     }
                     else {
                         id = "";
-                        //document.querySelector('kos_full').setAttribute('id', '');
                         this.setState({price: price, amount: amount, num: 1});
                     }
 
                     localStorage.setItem('kupi', JSON.stringify([]));
-                    //return {price: price, amount: amount};
                 }
                 else {
-                    console.log("non unid");
-                    
                     if(!data.name) {
-                        console.log("zero");
                         id = "kos_empty";
-                        //document.querySelector('kos_full').setAttribute('id', 'kos_empty');
                         this.setState({price: price, amount: 1, num: 1});
                     }
                     else {
-                        console.log("non zero");
-                        //document.querySelector('p.kosFull').setAttribute('id', '');
                         id = "";
                         this.setState({price: price, amount: 1, num: 1});
                     }
-                    //return {price: price, amount: 1};
                 }
             }
             else {
-                console.log("all empty");
-
                 id = "kos_empty";
                 this.setState({price: "0,00", amount: 0, num: 1});
             }
@@ -217,7 +172,6 @@ class Kosarica extends Component {
 
     notify = () => {
         const kositem = document.getElementsByClassName('kositem');
-        console.log("notify")
         if (kositem.length !== 0) {
             this.removeAll()
             document.querySelector('div.notif').setAttribute('id', 'notif_show');
@@ -236,22 +190,13 @@ class Kosarica extends Component {
 
     componentDidMount() {
         document.title = "Košarica"
-        //console.log(document.querySelector('div.notif'))
     }
 
     render() {
         const data = {page: this.props.location.pathname, user: this.props.location.state.user};
-
-        //localStorage.setItem('kosarica', JSON.stringify([]));
-
-        console.log(JSON.parse(localStorage.getItem('kupi')));
         this.Kositems(this.state.num_kos);
-        
         this.calculate(this.state.num);
 
-        //za spremanje kupi korisit localstorage umjesto setState jer se nakon
-        //brisanja elementa stranica ponovo ucitaje pa se sva stanja vracaju na
-        
         return(
             <body>
                 <div className="site_kos">

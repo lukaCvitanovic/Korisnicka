@@ -119,18 +119,6 @@ class Search extends Component {
     change() {
         this.autocomplete(document.getElementsByName('search_bar')[0], this.list)
     }
-    /*
-    press(event) {
-        console.log("press")
-        if(event.keyCode == 13) {
-            
-            const {data} = this.props
-            const item_name = document.getElementsByName('search_bar')[0].value
-            navigate('/proizvodi/' + item_name, {state: {data},});
-            
-           console.log("enter")
-        }
-    }*/
 
     list
 
@@ -139,15 +127,12 @@ class Search extends Component {
             const {d} = this.props
             var item_name = document.getElementsByName('search_bar')[0].value
             item_name = (item_name.charAt(0).toLowerCase() + item_name.slice(1)).replace(/ /g,'_')
-            console.log("enter")
             navigate('/proizvodi/' + item_name, {state: {d},});
         }
     }
 
     componentDidMount() {
-        console.log("did")
         document.getElementsByName('search_bar')[0].addEventListener("change", this.change())
-        //document.getElementsByName('search_bar')[0].onkeydown = this.enter(event)
     }
 
     render() {
@@ -185,18 +170,3 @@ export default (props) => (
     render={data => <Search data={data.file} {...props} />}
     />
 )
-
-/*
- allArticlesJson(filter: {name: {ne: "db"}}) {
-    edges {
-      node {
-        articles {
-          node {
-            name
-          }
-        }
-        name
-      }
-    }
-  }
-*/

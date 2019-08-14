@@ -73,7 +73,6 @@ class Item extends Component {
 
         const detalji = Detail(details)
         const final_name = Naming(name, details)
-        console.log(this.props)
 
         return(
             <div className="itm">

@@ -16,22 +16,18 @@ class Login extends Component {
     }
 
     myCallBack(childData) {
-        //https://medium.com/@ruthmpardee/passing-data-between-reac-components-103ad82ebd17
         if (this.state.num === 0) {
             qry = childData.allArticlesJson.edges[0].node.data;
         } 
     }
 
     collectData = () => {
-        //const data = qry;
         const data = JSON.parse(localStorage.getItem('userData'));
         const state = this.props.location.state;
         const uname = document.querySelector('input.username').value;
         const pass = document.querySelector('input.password').value;
     
         const verdict = this.compare(uname, pass, data);
-        console.log(verdict);
-        console.log(uname)
 
         if(verdict) {
             var a = {before: this.props.location.pathname, user: uname};
@@ -60,10 +56,7 @@ class Login extends Component {
         }
     }
 
-    //TO DO metod koja stavlja crveni border na input ako nije dobar unos
     wrongEntry = () => {
-        console.log(document.querySelector('input.username').getAttribute('id'));
-
         if(document.querySelector('input.username').getAttribute('id') === '' || document.querySelector('input.username').getAttribute('id') === null) {
             document.querySelector('input.username').setAttribute('id', 'wrongU');
             document.querySelector('input.password').setAttribute('id', 'wrongP');
@@ -92,8 +85,7 @@ class Login extends Component {
             this.props.location.state = qry;
         }
         const data = {page: this.props.location.pathname, 
-            user: this.props.location.state.user};
-        console.log(data);
+            user: this.props.location.state.user}
 
         return(
             <body className="body_log">
@@ -120,7 +112,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-/*
-    <Link className="login_btn_link" to={before}>
-*/

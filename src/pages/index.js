@@ -29,7 +29,6 @@ class Index extends Component {
         const data = {page: this.props.location.pathname
             , user: this.props.location.state.user};
 
-        //const data = {page: "/", user: "guest"};
         return (
             <body>
                 <div class="site">
@@ -49,62 +48,3 @@ class Index extends Component {
 }
 
 export default Index;
-
-/*
-<Header data={data} />
-    <main class="item main">
-                        <Search />
-                        <Menu />
-                        <Cards num="4" a={data} />
-                        <NUP small="4" a={data} />
-                        <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
-                    </main>
-                    <Footer />
-*/
-
-/*
-export const query = graphql`
-query Cards {
-    allFile(filter:{relativePath:{regex:"/laptop/"}})
-    {
-        edges
-        {
-            node
-            {
-                    relativePath
-                    childImageSharp {
-                        fixed(width: 125, height: 125) {
-                            ...GatsbyImageSharpFixed
-                        }
-                }
-            	name
-            }
-        }
-    }
-}
-`
-
-/*
-{
-    allFile(filter:{relativePath:{regex:"/laptop/"}})
-    {
-        edges
-        {
-            node
-            {
-            	relativePath
-            	childImageSharp {
-                fixed(width: 125, height: 125) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            	name
-            }
-        }
-    }
-  	
-    directory {
-        absolutePath
-    }
-}
-*/

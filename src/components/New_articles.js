@@ -2,26 +2,6 @@ import React, { Component } from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import NCards from "./Novo_cards.js";
 
-/*
-
-const Pics = (list) => list.map(el => {
-    return(
-        <Card src={el[0].node.childImageSharp.fixed} text={el[1]}/>
-    );
-});
-
-const Tags = (imgs, json, tag) => {
-    const crds = [];
-    for(var i = 0; i < imgs.length; i++) {
-        if (imgs[i].node.name.search(tag) !== -1) {
-            var temp = [imgs[i],json[i]]
-            crds.push(temp);
-        }
-    }
-    
-    return crds;
-}*/
-
 class NUP extends Component {
     constructor(props) {
         super(props);
@@ -45,36 +25,6 @@ class NUP extends Component {
     }
 
     render() {
-        /*
-        const pics = [];
-
-        var js = [];
-        var jp = [];
-
-        for(var i = 0; i<this.props.json.length; i++) {
-            js.push(this.props.json[i].node);
-            jp.push(this.props.jpg[i].node);
-        }
-
-        var jsort = _.sortBy(js, 'name');
-        var jpsort = _.sortBy(jp, 'name');
-
-        var jpgOld = [];
-        for(i = 0; i<jpsort.length; i++) {
-            var temp = {"node":jpsort[i]};
-            jpgOld.push(temp);
-        }
-
-        const withTag = Tags(jpgOld, jsort, "");
-        
-        for(i = 0;i < this.state.num; i++) {
-            pics.push(withTag[i]);
-        }
-
-        const crds = Pics(pics);
-
-*/
-
         var props_json = []
         for(var i = 0; i<this.props.json.length; i++) {
             for(var j = 0; j<this.props.json[i].node.articles.length; j++) {
@@ -149,22 +99,3 @@ export default (props) => (
     render={data => <NUP jpg={data.jpg.edges} json={data.json.edges} small={props.small} a={props.a} />}
     />
 )
-
-/*
-<div className="nup">
-                <div class="labels">
-                    <p>Novo u Prodaji</p>
-                    <Link className="labels_link" to="/about" >
-                        <p className="labels_p">
-                            Prikaži sve
-                        </p>
-                    </Link>       
-                </div>
-                <div class="cards">
-                    {crds}
-                </div>
-                <div className="prosiri" onClick={this.click}>
-                    <p>{this.state.expand_btn}</p>
-                </div>
-            </div>
-*/

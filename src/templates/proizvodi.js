@@ -37,7 +37,6 @@ class Proizvodi extends Component {
         const data = {page: this.props.location.pathname, 
             user: this.props.location.state.user};
             
-        console.log(this.props)
         const {label} = this.props.pageContext
         const jpg = findJpg(this.props.data.jpg.edges, label)
         const json = findJson(this.props.data.json.edges[0].node.articles, label)

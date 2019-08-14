@@ -22,7 +22,6 @@ class Header extends Component {
     });
     
     createUserLink = (data) => {
-        console.log(data)
         if((data.user !== undefined) && (data.user !== "guest")) {
             return(
                 <div className="user_link">
@@ -70,30 +69,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-/*
-<Link className = "Layout_nav_link" to = "/" activeClassName="active">
-                        Početna
-                    </Link>    
-                    <Link className = "Layout_nav_link" to = "/blog">
-                        Blog
-                    </Link>
-                    <Link className = "Layout_nav_link" to = "/akcije">
-                        Akcije
-                    </Link>
-*/
-
-/*
-<Link className = "Layout_nav_link" to = "/">
-                        Košarica
-                    </Link>    
-                    <Link className = "Layout_nav_link" to = "/blog">
-                        Profil
-                    </Link>
-                    <Link className = "Layout_nav_link" to = "/akcije">
-                        Registriraj se
-                    </Link>
-                    <Link className = "Layout_nav_link" to = "/akcije">
-                        Prijavi se
-                    </Link>
-*/

@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import "../styles/prof_lay.css";
 import { navigate } from "gatsby";
 
-
 class Profil extends Component {
     constructor(props) {
         super(props);

@@ -4,7 +4,6 @@ import { navigate } from "@reach/router";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// list of items
 const list = [
     { name: 'početna', to:"/" },
     { name: 'novo', to:"/novo" },
@@ -14,8 +13,6 @@ const list = [
     { name: 'registriraj se', to:"/registriraj_se" }
   ];
    
-  // One item component
-  // selected prop will be passed
   const MenuItem = ({ text, to, data }) => {
     return (
         <div className="menu-item">
@@ -26,8 +23,6 @@ const list = [
     );
   };
    
-  // All items component
-  // Important! add unique key
   export const Menu = (list, data) => list.map(el => {
     return (
       <MenuItem text={el.name} to={el.to} data={data} />
@@ -54,7 +49,6 @@ const list = [
         document.getElementsByClassName('nav1')[0].className = "nav"
       }
       navigate(data.page, {state: {before: data.page, user: "guest"}})
-      //this.check()
     }
 
     createULink = (data) => {

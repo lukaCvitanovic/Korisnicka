@@ -12,8 +12,6 @@ class ScrollButton extends Component {
     
     scrollStep() {
       const site = document.querySelector("#gatsby-focus-wrapper").firstChild.firstChild
-      //Text();
-
       if (site.scrollTop === 0) {
           clearInterval(this.state.intervalId);
       }

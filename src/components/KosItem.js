@@ -42,8 +42,6 @@ class KosItem extends Component {
     }
 
     render() {
-        console.log(this.props.time);
-
         return(
             <div id={this.props.time} className="kositem">
                 <div className="upper">
@@ -62,9 +60,3 @@ class KosItem extends Component {
 }
 
 export default KosItem;
-
-/*
-    {pic: this.props.src,
-                     name: this.props.text.name,
-                     price: this.props.text.price};
-*/

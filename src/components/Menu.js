@@ -2,24 +2,9 @@ import React, { Component } from "react";
 import Cat from "./Category.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { StaticQuery, graphql, Link } from "gatsby";
-//import { prefix } from "@fortawesome/free-brands-svg-icons";
-/*
-const list = [
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' },
-    { icn: 'facebook' }
-];*/
 
 const IconItem = (list, data) => list.map(el => {
     const { node } = el;
-    console.log(data)
     var name = node.name.replace('_',' ');
     if(data.page === node.to) {
         return (
@@ -53,7 +38,6 @@ export const Icon = ({data}) => {
 }
 
 const Cats = (tree, data) => (tree.names).map(el => {
-    //console.log(el)
     var subnames = [];
     for(var i = 0; i<tree[el].names.length; i++) {
         subnames.push(tree[el].names[i].replace('_',' '));
@@ -68,7 +52,6 @@ const Cats = (tree, data) => (tree.names).map(el => {
 });
 
 const Tree = (edges) => {
-    console.log(edges)
     var tree = {names: []};
     for(var i = 0; i<edges.length; i++) {
         var name = edges[i].node.name;
@@ -106,7 +89,6 @@ class Menu extends Component {
     render() {
         const tree = Tree(this.props.dirs);
         const Categs = Cats(tree, this.props.d);
-        //console.log(Categs)
         
         return(
             <aside class="item kategorije">
@@ -119,8 +101,6 @@ class Menu extends Component {
         );
     }    
 }
-
-//export default Menu;
 
 export default (props) => (
     <StaticQuery

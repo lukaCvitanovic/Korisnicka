@@ -62,44 +62,30 @@ class Cat extends Component {
         this.state = {display:'none', state:0, icon:'caret-right', button_class:'dropdown_btn'};
         this.click = this.click.bind(this);
         const links = Links(props.sub, props.data.page, props.data.user);
-        //console.log("Cat")
         if (this.num === 0) {
-            //console.log("a")
             this.state = this.checkLinks(links)
         }
-        //console.log("0" + this.state)
     }
     
     num = 0
 
     checkLinks(links) {
-        //console.log("1" + this.state)
         if(links.length > 0) {
             for(var i = 0; i < links.length; i++) {
-                //console.log(links[i].props.className)
                 switch(links[i].props.className) {
                     case 'cat_link2':
-                        //console.log(_.isEmpty(links[i].props.activeStyle))
                         if(!_.isEmpty(links[i].props.activeStyle)) {
-                            //console.log("hop1")
-                            //this.setState({display:'grid', state:1, icon:'caret-down', button_class:'dropdown_btn_active'});
-                            //console.log(this.state)
                             this.num++
                             return {display:'grid', state:1, icon:'caret-down', button_class:'dropdown_btn_active'}
                         }
                         break
                     case 'subname':
-                        //console.log(_.isEmpty(links[i].props.style))
                         if(!_.isEmpty(links[i].props.style)) {
-                            //console.log("hop2")
-                            //this.setState({display:'grid', state:1, icon:'caret-down', button_class:'dropdown_btn_active'});
-                            //console.log(this.state)
                             this.num++
                             return {display:'grid', state:1, icon:'caret-down', button_class:'dropdown_btn_active'}
                         }
                         break
                     case 'subname2':
-                        console.log(_.isEmpty(links[i].props.style))
                         if(!_.isEmpty(links[i].props.style)) {
                             this.num++
                             return {display:'grid', state:1, icon:'caret-down', button_class:'dropdown_btn_active'}

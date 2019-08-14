@@ -10,8 +10,6 @@ const Pics = (list, a) => list.map(el => {
 
 const Tags = (imgs, json, tag) => {
     const crds = [];
-    //console.log(imgs);
-    //console.log(json);
     for(var i = 0; i < imgs.length; i++) {
         var temp
         if(tag.length > 0) {
@@ -36,8 +34,6 @@ const Tags = (imgs, json, tag) => {
 
 class NCards extends Component {
     render () {
-        console.log(this.props)
-
         const pics = [];
         
         var js = [];
@@ -71,7 +67,6 @@ class NCards extends Component {
         for(i = 0;i < end; i++) {
             pics.push(withTag[i]);
         }
-        console.log(withTag)
         const crds = Pics(pics, this.props.a);
         
         return(
@@ -83,47 +78,3 @@ class NCards extends Component {
 }
 
 export default NCards;
-
-/*console.log(this.props)
-        const pics = [];
-
-        var js = [];
-        var jp = [];
-
-        for(var i = 0; i<this.props.json.length; i++) {
-            js.push(this.props.json[i].node);
-            jp.push(this.props.jpg[i].node);
-        }
-
-        var jsort = _.sortBy(js, 'name');
-        var jpsort = _.sortBy(jp, 'name');
-
-        var jpgOld = [];
-        for(i = 0; i<jpsort.length; i++) {
-            var temp = {"node":jpsort[i]};
-            jpgOld.push(temp);
-        }
-
-
-        const withTag = Tags(jpgOld, jsort, this.props.tag);
-        
-        var end;
-
-        if (typeof this.props.num === 'number') {
-            end = this.props.num;
-        }
-        else {
-            end = withTag.length;
-        }
-
-        for(i = 0;i < end; i++) {
-            pics.push(withTag[i]);
-        }
-        
-        const crds = Pics(pics, this.props.a);
-
-        return(
-            <div className="cards">
-                {crds}
-            </div>
-        ); */

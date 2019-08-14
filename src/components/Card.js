@@ -57,7 +57,6 @@ class Card extends Component {
         else {
             localStorage.setItem('kosarica', JSON.stringify([item]));
         }
-        console.log("dodano");
     }
     
     buy = () => {
@@ -66,7 +65,6 @@ class Card extends Component {
                         price: this.props.pic_data[1].price};
             
         const a = this.props.a;
-        console.log(item);
 
         localStorage.setItem('kupi', JSON.stringify(item));
         navigate('/kosarica', {state: {a},});
@@ -78,7 +76,6 @@ class Card extends Component {
         const to = "/proizvodi/" + name
         const novo = this.props.pic_data[1].new
         const {action} = this.props.pic_data[1]
-        console.log(novo)
 
         const icons = Icons(novo, action)
         return(
@@ -107,25 +104,3 @@ class Card extends Component {
 }
 
 export default Card;
-
-/*
-<Img fixed={props.src} />
-                <p className="card_descript">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p className="price">6548</p>
-                <p className="payment">Lorem ipsum dolor</p>
-                <div className="buttons">
-                    <Link className="buynow_link" to="/about" >
-                        <button className="buynow">
-                            <p>Kupi odmah</p>
-                        </button>
-                    </Link>
-                    <button className="cart">
-                        <FontAwesomeIcon icon={['fas', 'cart-plus']} />
-                        <p>Dodaj u košaricu</p>
-                    </button>
-                </div>
-*/
-
-//<div class="photo"></div>
-//<img src={props.src} alt={props.alt}/>   
-//<Img fixed={props.src} />

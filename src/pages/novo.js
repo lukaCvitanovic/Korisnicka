@@ -33,10 +33,3 @@ class Novo extends Component {
 }
 
 export default Novo;
-
-// Za potrebe kategorija i stranica novo i akcija
-// treba staviti sve JSON filove u jedan folder (JSON)
-// te u JSON-ima napraviti vrijednost path koja se odnosi na 
-// relativnu lokaciju slike za koju je vezana taj JSON
-
-// Na ovaj nacin je moguce sa istim query-em dobiti sve JSON filove

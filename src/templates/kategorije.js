@@ -8,64 +8,6 @@ import { graphql } from 'gatsby'
 import MdCards from "../components/Mkdwn_cards";
 import "../styles/novo_lay.css";
 
-/*
- class Kategorije extends Component {
-     render() {
-        const data = {page: this.props.location.pathname, 
-            user: this.props.location.state.user};
-
-        return(
-            <body>
-                <div className="site_kategorije">
-                    <Header data={data} />
-                    <main className="item main">
-                        <Search />
-                        <Menu d={data} />
-                        <NovoCards num="a" a={data} tag="" label="Novo" />
-                        <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
-                    </main>
-                    <Footer />
-                </div>
-            </body>
-        );
-     }
- }
-
-export const query = graphql`
-  query kategorije {
-    allFile(filter: {extension: {eq: "jpg"}}) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fixed(width: 125, height: 125) {
-                width
-              }
-            }
-            name
-          }
-        }
-      }
-  }
-`
-export default Kategorije
-*/
-
-/*
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  console.log(data)
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
-  return (
-    <div className="blog-post-container">
-      OK
-    </div>
-  )
-}
-*/
-
 class Kategorije extends Component {
   componentDidMount() {
     document.title = "Kategorije - " + this.props.pageContext.json
@@ -77,7 +19,6 @@ class Kategorije extends Component {
       page: this.props.location.pathname,
       user: this.props.location.state.user
     };
-    console.log(this.props)
     const json = this.props.data.json.edges[0].node.articles
     const jpg = this.props.data.jpg.edges
     const label = this.props.pageContext.json
@@ -151,22 +92,3 @@ query MyQuery($slug: String!, $jpg: String!, $json: String!) {
 `
 
 export default Kategorije
-
-/*
-<NovoCards num="a" a={data} tag="" label={frontmatter.label} />
-allArticlesJson(filter: {name: {eq: "Laptopi"}}) {
-    edges {
-      node {
-        articles {
-          node {
-            description
-            name
-            payment
-            price
-          }
-        }
-        name
-      }
-    }
-  }
-*/

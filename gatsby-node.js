@@ -2,8 +2,8 @@
 const path = require(`path`)
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const kategorijeTemplate = path.resolve(`src/pages/kategorije.js`)
-  const proizvodiTemplate = path.resolve(`src/pages/proizvodi.js`)
+  const kategorijeTemplate = path.resolve(`src/templates/kategorije.js`)
+  const proizvodiTemplate = path.resolve(`src/templates/proizvodi.js`)
   return graphql(`
     {
       allMarkdownRemark {
@@ -50,42 +50,3 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 }
-
-/*
-const path = require(`path`)
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions
-  const kategorijeTemplate = path.resolve(`src/pages/kategorije.js`)
-  const proizvodiTemplate = path.resolve('src/pages/proizvodi.js')
-  const markDownQuery = await graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              slug
-              label
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  if(markDownQuery.errors) {
-    console.error(markDownQuery.errors)
-    throw markDownQuery.errors
-  }
-  console.log(markDownQuery)
-  markDownQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const slug  = node.frontmatter.slug;
-        const jpg_filter = "/" + node.frontmatter.label + "/"
-        const json_filter = node.frontmatter.label
-      createPage({
-        path: "/kategorije" + slug,
-        component: kategorijeTemplate,
-        context: {slug: slug, jpg: jpg_filter, json: json_filter}, // additional data can be passed via context
-      })
-    })
-}
-*/

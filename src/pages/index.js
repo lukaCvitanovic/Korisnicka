@@ -28,6 +28,7 @@ class Index extends Component {
         userStatus(this.props.location);
         const data = {page: this.props.location.pathname
             , user: this.props.location.state.user};
+        console.log(data)
 
         return (
             <body>
@@ -40,7 +41,7 @@ class Index extends Component {
                         <NUP small="4" a={data} />
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         );

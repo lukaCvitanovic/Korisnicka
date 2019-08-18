@@ -33,7 +33,7 @@ class Kategorije extends Component {
                 <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                 <MdCards jpg={jpg} json={json} num="a" tag={[]} label={label} a={data} />
             </main>
-            <Footer />
+            <Footer data={data} />
         </div>
       </body>
     );

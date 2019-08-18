@@ -249,7 +249,7 @@ class Kosarica extends Component {
                             </div>
                         </div>
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
                 <div id="" className="notif" onClick={ () => {this.notif_exit();}}>
                     <p>Kupnja obavljena</p>

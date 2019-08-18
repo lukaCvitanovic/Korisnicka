@@ -86,7 +86,7 @@ class Profil extends Component {
                             </div>
                         </div>
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         );

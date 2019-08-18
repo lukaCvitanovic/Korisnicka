@@ -123,7 +123,7 @@ class Register extends Component {
                         </div>
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         );

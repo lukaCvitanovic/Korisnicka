@@ -25,7 +25,7 @@ class Novo extends Component {
                         <NovoCards num="a" a={data} tag={["new"]} label="Novo" />
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         );

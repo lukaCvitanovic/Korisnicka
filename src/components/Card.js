@@ -63,11 +63,9 @@ class Card extends Component {
         const item = {pic: this.props.pic_data[0].node.childImageSharp.fixed,
                         name: this.props.pic_data[1].name,
                         price: this.props.pic_data[1].price};
-            
-        const a = this.props.a;
 
         localStorage.setItem('kupi', JSON.stringify(item));
-        navigate('/kosarica', {state: {a},});
+        navigate('/kosarica', {state: {before: this.props.a.page, user: this.props.a.user}});
     }
 
     render() {

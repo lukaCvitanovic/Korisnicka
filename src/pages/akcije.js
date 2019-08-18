@@ -25,7 +25,7 @@ class Akcije extends Component {
                         <NovoCards num="a" a={data} tag={["action"]} label="Akcije" />
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         )

@@ -52,7 +52,7 @@ class Proizvodi extends Component {
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                         <Item item_data={item_d} query={this.props.data} d={data} />
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         )

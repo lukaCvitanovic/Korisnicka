@@ -14,6 +14,7 @@ class Onama extends Component {
     render() {
         const data = {page: this.props.location.pathname, 
             user: this.props.location.state.user};
+        console.log(this.props)
         return(
             <body>
                 <div className="site_o_nama">
@@ -24,7 +25,7 @@ class Onama extends Component {
                         <Nama />
                         <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                     </main>
-                    <Footer />
+                    <Footer data={data} />
                 </div>
             </body>
         )

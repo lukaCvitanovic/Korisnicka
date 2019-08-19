@@ -28,7 +28,6 @@ class Index extends Component {
         userStatus(this.props.location);
         const data = {page: this.props.location.pathname
             , user: this.props.location.state.user};
-        console.log(data)
 
         return (
             <body>

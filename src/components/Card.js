@@ -44,6 +44,10 @@ class Card extends Component {
         this.cart = this.cart.bind(this);
     }
 
+    notif_exit = () => {
+        document.querySelector('div.notif_added').setAttribute('id', '');
+    }
+
     cart = () => {
         const item = {pic: this.props.pic_data[0].node.childImageSharp.fixed,
                      name: this.props.pic_data[1].name,
@@ -57,6 +61,14 @@ class Card extends Component {
         else {
             localStorage.setItem('kosarica', JSON.stringify([item]));
         }
+
+        document.querySelector('div.notif_added').setAttribute('id', 'notif_show');
+            setTimeout(function (){
+                const notif = document.querySelector('div.notif_added')
+                if (notif !== null) {
+                    notif.setAttribute('id', '');
+                }
+            }, 3000);
     }
     
     buy = () => {
@@ -95,6 +107,10 @@ class Card extends Component {
                             <FontAwesomeIcon icon={['fas', 'cart-plus']} />
                             <p>Dodaj u košaricu</p>
                         </button>
+                    </div>
+                    <div id="" className="notif_added" onClick={ () => {this.notif_exit();}}>
+                        <p>Dodano</p>
+                        <FontAwesomeIcon className="cart_added" icon={['fas', 'cart-plus']} />
                     </div>
                 </div>
         );

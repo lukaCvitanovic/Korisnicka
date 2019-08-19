@@ -4,8 +4,7 @@ import { Link } from "gatsby";
 
 const Footer = (data) => {
     const a = data.data
-    console.log(a.user)
-    console.log(a)
+    
     return (
         <footer class="item footer">
             <div class="links" id="li1">
@@ -16,12 +15,12 @@ const Footer = (data) => {
             </div>
             <div class="links" id="li3">
                 <div class="icons">
-                    <Link className="social_link" to="https://hr-hr.facebook.com/">
+                    <a className="social_link" href="https://hr-hr.facebook.com/">
                         <FontAwesomeIcon name="facebook" size="2x" icon={['fab', 'facebook']} />
-                    </Link>
-                    <Link className="social_link" to="https://twitter.com/?lang=hr">
+                    </a>
+                    <a className="social_link" href="https://twitter.com/?lang=hr">
                         <FontAwesomeIcon name="twitter" size="2x" icon={['fab', 'twitter']} />
-                    </Link>
+                    </a>
                 </div>
             </div>
         </footer>

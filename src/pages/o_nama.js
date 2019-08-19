@@ -14,7 +14,7 @@ class Onama extends Component {
     render() {
         const data = {page: this.props.location.pathname, 
             user: this.props.location.state.user};
-        console.log(this.props)
+            
         return(
             <body>
                 <div className="site_o_nama">

@@ -595,6 +595,9 @@ body {
     display: flex;
     height: 31.25px;
 }
+.cart_added {
+    margin-right: 20px;
+}
 @supports (display: grid) {
     .search {
         grid-area: showcase;

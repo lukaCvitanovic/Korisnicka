@@ -155,6 +155,89 @@
     color: green;
     background-image: radial-gradient(white, white,white, transparent,transparent,transparent);
 }
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+.overlay_items {
+    display: flex;
+    position: fixed;
+    top: 41%;
+    left: 31%;
+    flex-direction: column;
+    width: 24em;
+    height: 10em;
+    background-color: white;
+    border: solid 2px #17bf00;
+}
+.overlay_btns {
+    display: flex;
+    margin: auto 0;
+}
+.overlay_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 9em;
+    flex-shrink: 0;
+    background-color: green;
+    color: white;
+    border: 1px solid;
+    border-color: green;
+    border-radius: 5px;
+}
+#yes:hover,
+#no:hover {
+    background-color: white;
+    color: green;
+    cursor: pointer;
+}
+.overlay_btn > p {
+    margin: 1rem;
+    font-size: x-large;
+}
+.overlay_btn > .overlay_icn {
+    margin: 1rem;
+}
+#yes {
+    margin-right: auto;
+    margin-left: 5em;
+}
+#no {
+    margin-right: 5em;
+}
+.titl {
+    font-size: xx-large;
+    align-self: center;
+    margin: auto 0;
+    font-weight: bold;
+}
+.exit {
+    position: fixed;
+    right: 2em;
+    top: 2em;
+    background-color: white;
+    width: 2em;
+    height: 2em;
+    border: 2px solid red;
+    border-radius: 0.2rem;
+    display: flex;
+}
+.exit:hover {
+    color: red;
+    cursor: pointer;
+}
+.exit_icn {
+    align-self: center;
+    margin: 0 auto 0px auto;
+}
 @supports (display: grid) {
     @media screen and (min-width: 500px) {
         .placanje {

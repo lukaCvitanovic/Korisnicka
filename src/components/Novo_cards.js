@@ -67,6 +67,7 @@ class NCards extends Component {
         for(i = 0;i < end; i++) {
             pics.push(withTag[i]);
         }
+        
         const crds = Pics(pics, this.props.a);
         
         return(

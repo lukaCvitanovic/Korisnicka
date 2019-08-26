@@ -3,6 +3,13 @@ import { StaticQuery, graphql, Link } from "gatsby";
 import NCards from "./Novo_cards.js";
 
 const Cards = ({jpg, json, num, a}) => {
+    var props_json = []
+        for(var i = 0; i<json.length; i++) {
+            for(var j = 0; j<json[i].node.articles.length; j++) {
+                props_json.push(json[i].node.articles[j])
+            }
+        }
+
     return(
         <div class="cards_cont">
             <div class="labels">
@@ -13,7 +20,7 @@ const Cards = ({jpg, json, num, a}) => {
                     </p>
                 </Link>
             </div>
-            <NCards json={json[0].node.articles} jpg={jpg} num={parseInt(num)} tag={[]} a={a} />
+            <NCards json={props_json} jpg={jpg} num={parseInt(num)} tag={["action"]} a={a} />
         </div>
     );
 }
@@ -22,7 +29,7 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query Cards {
-                jpg: allFile(filter:{relativePath:{regex:"/Laptopi/"},extension:{eq:"jpg"}})
+                jpg: allFile(filter:{extension:{eq:"jpg"}})
                 {
                     edges
                     {
@@ -41,7 +48,7 @@ export default (props) => (
                         }
                     }
                 }
-                json: allArticlesJson(filter: {name: {eq: "Laptopi"}}) {
+                json: allArticlesJson(filter: {name: {ne: "db"}}) {
                     edges {
                       node {
                         name

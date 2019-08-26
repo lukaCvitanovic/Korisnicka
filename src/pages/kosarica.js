@@ -171,6 +171,7 @@ class Kosarica extends Component {
     }
 
     notify = () => {
+        this.exit()
         const kositem = document.getElementsByClassName('kositem');
         if (kositem.length !== 0) {
             this.removeAll()
@@ -182,6 +183,15 @@ class Kosarica extends Component {
                 }
             }, 3000);
         }
+    }
+
+    verify = () => {
+        document.querySelector('div.overlay').style.display = 'inline-block'
+    }
+
+    exit = () => {
+        console.log("yes")
+        document.querySelector('div.overlay').style.display = 'none'
     }
 
     notif_exit = () => {
@@ -209,7 +219,7 @@ class Kosarica extends Component {
                                         <p className="bold">Ukupno:</p>
                                         <p className="kos_price">{this.state.price} Kn</p>
                                     </div>
-                                    <button className="reg_btn" onClick={ () => {this.notify();}}>Kupi</button>
+                                    <button className="reg_btn" onClick={ () => {this.verify();}}>Kupi</button>
                                 </div>
                                 <div className="iznos_div">
                                     <p className="bold">Broj proizvoda: {this.state.amount}</p>
@@ -255,6 +265,24 @@ class Kosarica extends Component {
                     <p>Kupnja obavljena</p>
                     <FontAwesomeIcon className="check" icon={['fas', 'check-circle']} size="2x" />
                 </div>
+                <div className="overlay">
+                    <div className="overlay_items">
+                        <p className="titl" >Odobrite kupovinu</p>
+                        <div className="overlay_btns">
+                            <button id="yes" className="overlay_btn" onClick={ () => {this.notify();} }>
+                                <p>Da</p>
+                                <FontAwesomeIcon className="overlay_icn" icon={['fas', 'check']} size="2x" />
+                            </button>
+                            <button id="no" className="overlay_btn" onClick={ () => {this.exit();} }>
+                                <p>Ne</p>
+                                <FontAwesomeIcon className="overlay_icn" icon={['fas', 'times']} size="2x" />
+                            </button>
+                        </div>
+                    </div>
+                    <div className="exit" onClick={ () => {this.exit();} } >
+                        <FontAwesomeIcon className="exit_icn" icon={['fas', 'times']} size="2x" />
+                    </div>
+                </div>
                 <ScrollButton scrollStepInPx="50" delayInMs="16.66" /> 
             </body>
         );
@@ -262,3 +290,7 @@ class Kosarica extends Component {
 }
 
 export default Kosarica;
+
+/*
+inline-block
+*/
